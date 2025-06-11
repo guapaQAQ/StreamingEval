@@ -203,7 +203,6 @@ evaluation_logs/
 ## Metrics
 
 ### Quality Metrics
-- **ASR-BLEU**: ASR-specific BLEU score
 - **Hypothesis**: Generated transcription
 - **Reference**: Ground truth transcription
 
@@ -277,23 +276,6 @@ For faster evaluation, you can run different evaluation types in parallel:
 
 # Terminal 3
 ./run_evaluation_suite.sh --type simul --languages representative &
-```
-
-## Troubleshooting
-
-### Common Issues
-
-1. **CUDA Out of Memory**: Reduce batch size or use smaller models
-2. **Missing Model Files**: Ensure all model checkpoints are downloaded
-3. **Dataset Download Failures**: Check internet connection and disk space
-4. **Permission Errors**: Ensure script has execute permissions (`chmod +x run_evaluation_suite.sh`)
-
-### Debug Mode
-
-Add debug logging by modifying the Python scripts:
-```python
-import logging
-logging.basicConfig(level=logging.DEBUG)
 ```
 
 ## Contributing
